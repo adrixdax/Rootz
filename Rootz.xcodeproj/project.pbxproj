@@ -7,19 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		73CBB0A32B8F7B6100914552 /* CLLocationCoordinate2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CBB0A22B8F7B6100914552 /* CLLocationCoordinate2D.swift */; };
+		73CBB0A72B8F7B8700914552 /* CompassHeading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CBB0A62B8F7B8700914552 /* CompassHeading.swift */; };
+		73CBB0A92B8F802800914552 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CBB0A82B8F802800914552 /* Double.swift */; };
 		73CEA2902B8E420F0080804E /* RootzApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CEA28F2B8E420F0080804E /* RootzApp.swift */; };
 		73CEA2922B8E420F0080804E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CEA2912B8E420F0080804E /* ContentView.swift */; };
 		73CEA2942B8E42110080804E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73CEA2932B8E42110080804E /* Assets.xcassets */; };
 		73CEA2982B8E42110080804E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73CEA2972B8E42110080804E /* Preview Assets.xcassets */; };
+		73FB28C62B8F464800D1749A /* Marker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FB28C52B8F464800D1749A /* Marker.swift */; };
+		73FB28C82B8F467600D1749A /* CompassMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FB28C72B8F467600D1749A /* CompassMarkerView.swift */; };
+		73FB28CF2B8F67F500D1749A /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FB28CE2B8F67F500D1749A /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		73CBB0A22B8F7B6100914552 /* CLLocationCoordinate2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationCoordinate2D.swift; sourceTree = "<group>"; };
+		73CBB0A62B8F7B8700914552 /* CompassHeading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompassHeading.swift; sourceTree = "<group>"; };
+		73CBB0A82B8F802800914552 /* Double.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		73CEA28C2B8E420F0080804E /* Rootz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rootz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73CEA28F2B8E420F0080804E /* RootzApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootzApp.swift; sourceTree = "<group>"; };
 		73CEA2912B8E420F0080804E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		73CEA2932B8E42110080804E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		73CEA2952B8E42110080804E /* Rootz.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Rootz.entitlements; sourceTree = "<group>"; };
 		73CEA2972B8E42110080804E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		73FB28C52B8F464800D1749A /* Marker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Marker.swift; sourceTree = "<group>"; };
+		73FB28C72B8F467600D1749A /* CompassMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompassMarkerView.swift; sourceTree = "<group>"; };
+		73FB28CB2B8F4A8300D1749A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		73FB28CE2B8F67F500D1749A /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +46,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		73CBB0A12B8F7B5500914552 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				73CBB0A82B8F802800914552 /* Double.swift */,
+				73CBB0A22B8F7B6100914552 /* CLLocationCoordinate2D.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		73CEA2832B8E420F0080804E = {
 			isa = PBXGroup;
 			children = (
@@ -52,11 +74,17 @@
 		73CEA28E2B8E420F0080804E /* Rootz */ = {
 			isa = PBXGroup;
 			children = (
+				73FB28CB2B8F4A8300D1749A /* Info.plist */,
 				73CEA28F2B8E420F0080804E /* RootzApp.swift */,
 				73CEA2912B8E420F0080804E /* ContentView.swift */,
+				73CBB0A12B8F7B5500914552 /* Extension */,
+				73FB28CE2B8F67F500D1749A /* LocationManager.swift */,
 				73CEA2932B8E42110080804E /* Assets.xcassets */,
 				73CEA2952B8E42110080804E /* Rootz.entitlements */,
 				73CEA2962B8E42110080804E /* Preview Content */,
+				73FB28C52B8F464800D1749A /* Marker.swift */,
+				73FB28C72B8F467600D1749A /* CompassMarkerView.swift */,
+				73CBB0A62B8F7B8700914552 /* CompassHeading.swift */,
 			);
 			path = Rootz;
 			sourceTree = "<group>";
@@ -140,7 +168,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				73CEA2922B8E420F0080804E /* ContentView.swift in Sources */,
+				73FB28C82B8F467600D1749A /* CompassMarkerView.swift in Sources */,
+				73CBB0A92B8F802800914552 /* Double.swift in Sources */,
+				73CBB0A72B8F7B8700914552 /* CompassHeading.swift in Sources */,
+				73FB28CF2B8F67F500D1749A /* LocationManager.swift in Sources */,
 				73CEA2902B8E420F0080804E /* RootzApp.swift in Sources */,
+				73FB28C62B8F464800D1749A /* Marker.swift in Sources */,
+				73CBB0A32B8F7B6100914552 /* CLLocationCoordinate2D.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +308,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Rootz/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -284,7 +319,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
@@ -292,10 +327,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.proteina.Rootz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -312,6 +348,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Rootz/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -322,7 +359,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
@@ -330,10 +367,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.proteina.Rootz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

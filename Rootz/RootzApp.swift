@@ -12,6 +12,7 @@ struct RootzApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+            .environmentObject(LocationManager())
         }
     }
 }
