@@ -14,10 +14,19 @@ struct ContentView : View {
     @State private var searchText = ""
     @State private var selectedPlacemark: MKPlacemark?
     @State private var searchResults: [MKMapItem] = []
+    @State private var baseHeading : Double = 0
+    @Environment(\.colorScheme) var colorScheme
+    
+    init(compassHeading: CompassHeading = CompassHeading(), searchText: String = "", selectedPlacemark: MKPlacemark? = nil, searchResults: [MKMapItem] = []) {
+        self.compassHeading = compassHeading
+        self.searchText = searchText
+        self.selectedPlacemark = selectedPlacemark
+        self.searchResults = searchResults
+    }
 
     var body: some View {
-        VStack {
-            HStack {
+        VStack(alignment: .center) {
+            HStack(alignment: .top) {
                 TextField("Search", text: $searchText, onCommit: searchLocation)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                 Button(action: {
@@ -26,8 +35,7 @@ struct ContentView : View {
                     Text("Search")
                 }
             }
-                .padding()
-            Spacer()
+            .padding()
             if (!searchResults.isEmpty) {
                 List(searchResults, id: \.self) { result in
                     Text(result.name ?? "").onTapGesture {
@@ -36,21 +44,22 @@ struct ContentView : View {
                     }
                 }
             }
+            Spacer()
             ZStack {
-                ForEach(Marker.markers(), id: \.self) { marker in
-                    CompassMarkerView(marker: marker,
-                                      compassDegrees: self.compassHeading.degrees,
-                                      headingToSelectedLocation: self.locationManager.calculateHeadingToReferencePoint() ?? 0)
+                ZStack{
+                    
+                    Image(uiImage: UIImage(named: "\(colorScheme == .dark ? "DarkMode" : "LightMode")_OuterCircle")!).scaledToFit()
                 }
-            }.onChange(of: selectedPlacemark) { _ in
-                if let selectedPlacemark = selectedPlacemark {
-                    locationManager.setNewReferencePoint(referencePoint: selectedPlacemark.coordinate) 
+                ZStack{
+                    Image(uiImage: UIImage(named: "\(colorScheme == .dark ? "DarkMode" : "LightMode")_InnerCompass")!).scaledToFit().rotationEffect(Angle(degrees: self.locationManager.calculateHeadingToReferencePoint() ?? 0))
+                }
+                .onChange(of: selectedPlacemark) { _ in
+                    if let selectedPlacemark = selectedPlacemark {
+                        locationManager.setNewReferencePoint(referencePoint: selectedPlacemark.coordinate)
+                    }
                 }
             }
-            .frame(width: 300,
-                   height: 300)
             .rotationEffect(Angle(degrees: self.compassHeading.degrees))
-            .statusBar(hidden: true)
             Spacer()
         }
     }

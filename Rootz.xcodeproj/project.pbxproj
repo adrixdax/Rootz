@@ -15,7 +15,6 @@
 		73CEA2942B8E42110080804E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73CEA2932B8E42110080804E /* Assets.xcassets */; };
 		73CEA2982B8E42110080804E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73CEA2972B8E42110080804E /* Preview Assets.xcassets */; };
 		73FB28C62B8F464800D1749A /* Marker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FB28C52B8F464800D1749A /* Marker.swift */; };
-		73FB28C82B8F467600D1749A /* CompassMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FB28C72B8F467600D1749A /* CompassMarkerView.swift */; };
 		73FB28CF2B8F67F500D1749A /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FB28CE2B8F67F500D1749A /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,7 +29,6 @@
 		73CEA2952B8E42110080804E /* Rootz.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Rootz.entitlements; sourceTree = "<group>"; };
 		73CEA2972B8E42110080804E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		73FB28C52B8F464800D1749A /* Marker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Marker.swift; sourceTree = "<group>"; };
-		73FB28C72B8F467600D1749A /* CompassMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompassMarkerView.swift; sourceTree = "<group>"; };
 		73FB28CB2B8F4A8300D1749A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		73FB28CE2B8F67F500D1749A /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,7 +81,6 @@
 				73CEA2952B8E42110080804E /* Rootz.entitlements */,
 				73CEA2962B8E42110080804E /* Preview Content */,
 				73FB28C52B8F464800D1749A /* Marker.swift */,
-				73FB28C72B8F467600D1749A /* CompassMarkerView.swift */,
 				73CBB0A62B8F7B8700914552 /* CompassHeading.swift */,
 			);
 			path = Rootz;
@@ -168,7 +165,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				73CEA2922B8E420F0080804E /* ContentView.swift in Sources */,
-				73FB28C82B8F467600D1749A /* CompassMarkerView.swift in Sources */,
 				73CBB0A92B8F802800914552 /* Double.swift in Sources */,
 				73CBB0A72B8F7B8700914552 /* CompassHeading.swift in Sources */,
 				73FB28CF2B8F67F500D1749A /* LocationManager.swift in Sources */,
