@@ -16,14 +16,16 @@ struct CompassView: View {
     
     var body: some View {
         ZStack {
-            let compassImageName = "\(colorScheme == .dark ? "DarkMode" : "LightMode")_InnerCompass"
-            Image(uiImage: UIImage(named: compassImageName)!)
-                .scaledToFit()
-                .rotationEffect(Angle(degrees: self.locationManager.calculateHeadingToReferencePoint() ?? 0))
-        }
-        .onChange(of: selectedPlacemark) { _ in
-            if let selectedPlacemark = selectedPlacemark {
-                locationManager.setNewReferencePoint(referencePoint: selectedPlacemark.coordinate)
+            ZStack{
+                Image(uiImage: UIImage(named: "\(colorScheme == .dark ? "DarkMode" : "LightMode")_OuterCircle")!).scaledToFit()
+            }
+            ZStack{
+                Image(uiImage: UIImage(named: "\(colorScheme == .dark ? "DarkMode" : "LightMode")_InnerCompass")!).scaledToFit().rotationEffect(Angle(degrees: self.locationManager.calculateHeadingToReferencePoint() ?? 0))
+            }
+            .onChange(of: selectedPlacemark) { _ in
+                if let selectedPlacemark = selectedPlacemark {
+                    locationManager.setNewReferencePoint(referencePoint: selectedPlacemark.coordinate)
+                }
             }
         }
     }
